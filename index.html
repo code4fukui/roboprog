@@ -40,18 +40,17 @@ onload = async () => {
 
   renderer.setPixelRatio(1);
   renderer.setSize(width, height);
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputEncoding = THREE.sRGBEncoding; // 色補正
+
+  // VRモード対応
+  document.body.appendChild(VRButton.createButton(renderer));
+  renderer.xr.enabled = true;
 
   const camera = new THREE.PerspectiveCamera(45, width / height, 1, 100);
   camera.position.set(0, 3, 5);
-  //camera.position.set(0, 1.8, 0);
-  //camera.rotation.set(100, Math.PI / 4, 50);
-  //camera.lookAt(new THREE.Vector3(0, 1.8, -3));
-  //console.log(camera.rotation)
 
   const controls = new OrbitControls(camera, renderer.domElement);
-  // カメラコントローラーを滑らかに
-  controls.enableDamping = true;
+  controls.enableDamping = true; // カメラコントローラーを滑らかに
   controls.dampingFactor = 0.2;
 
   const light = new THREE.AmbientLight(0xFFFFFF, 1.0);
@@ -60,17 +59,6 @@ onload = async () => {
   // https://github.com/code4fukui/glb-viewer/
   const url = "https://code4fukui.github.io/glb-viewer/fukui-shimbun.glb";
   const model = await loadGLTF(url);
-  /*
-  model.traverse((object) => {
-    if (object.isMesh) {
-      object.material.color.r = 1;
-      object.material.color.g = 0;
-      object.material.color.b = 0;
-      object.material.transparent = true;
-      object.material.opacity = .8;
-    }
-  });
-  */
   model.position.set(0, 0, 0);
   scene.add(model);
 
@@ -85,9 +73,7 @@ onload = async () => {
   car.rotation.y = Math.PI;
   scene.add(car);
 
-  document.body.appendChild(VRButton.createButton(renderer));
-  renderer.xr.enabled = true;
-
+  // キーでロボットカー操作
   let dz = 0;
   let ry = 0;
   document.onkeydown = (e) => {
@@ -111,7 +97,7 @@ onload = async () => {
 
   renderer.setAnimationLoop(() => {
     controls.update();
-    
+
     car.rotation.y += ry / 100;
     const d = dz / 50;
     const th = Math.PI / 2 - car.rotation.y;
