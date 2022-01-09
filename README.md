@@ -10,7 +10,7 @@
 ## 場所
 
 - [fukui-shimbun.glb](https://github.com/code4fukui/glb-viewer/blob/main/fukui-shimbun.glb)
-- 福井新聞主催「プログラミングフェス2022mini」会場 [風の森ホール](https://www.fukuishimbun.co.jp/list/kazenomori)を iPhone 13 Pro で3Dスキャン
+- 福井新聞主催「プログラミングフェス2021mini」会場 [風の森ホール](https://www.fukuishimbun.co.jp/list/kazenomori)を iPhone 13 Pro で3Dスキャン
 
 ## ロボットカー
 
