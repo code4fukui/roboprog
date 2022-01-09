@@ -10,9 +10,9 @@
 ## 場所
 
 - [fukui-shimbun.glb](https://github.com/code4fukui/glb-viewer/blob/main/fukui-shimbun.glb)
-- 福井新聞風の森ホールを iPhone 13 Pro で3Dスキャン
+- 福井新聞 [風の森ホール](https://www.fukuishimbun.co.jp/list/kazenomori)を iPhone 13 Pro で3Dスキャン
 
 ## ロボットカー
 
 - [kidscar.gltf](kidscar.gltf)
-- [U22プロコン](https://u22procon.com/result/)で経済産業大臣賞受賞作品[Chokoku CAD](https://github.com/itta611/ChokokuCAD/blob/main/README.md)で作成
+- [U22プロコン](https://u22procon.com/result/)で経済産業大臣賞受賞作品「[Chokoku CAD](https://github.com/itta611/ChokokuCAD/blob/main/README.md)」で作成
