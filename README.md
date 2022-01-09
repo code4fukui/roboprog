@@ -14,5 +14,5 @@
 
 ## ロボットカー
 
-- [kidscar.gltf](kidscar.gltd)
+- [kidscar.gltf](kidscar.gltf)
 - [U22プロコン](https://u22procon.com/result/)で経済産業大臣賞受賞作品[Chokoku CAD](https://github.com/itta611/ChokokuCAD/blob/main/README.md)で作成
